@@ -1,233 +1,525 @@
-/* Reset */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+/* Common styles */
+@import url('./reset.css');
+@import url('./container.css');
+@import url('./global.css');
+@import url('./visually-hidden.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./mobile-menu.css');
+@import url('./hero.css');
+@import url('./clubs.css');
+
+/* ===========================
+   GLASS PANEL LAYOUT (секції)
+   =========================== 
+
+.clubs-section-container,
+.subscriptions-section-container,
+.programs-section-container,
+.benefits-section-container,
+.about-section-container,
+.contacts-section-container {
+  background-color: var(--panel);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(249, 250, 251, 0.06);
+  box-shadow: var(--shadow-soft);
+  padding: 24px 18px 26px;
 }
 
-ol,
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .clubs-section-container,
+  .subscriptions-section-container,
+  .programs-section-container,
+  .benefits-section-container,
+  .about-section-container,
+  .contacts-section-container {
+    padding: 32px 24px 30px;
+  }
 }
 
-ol:last-child,
-ul:last-child {
-  margin-bottom: 0;
+@media screen and (min-width: 1158px) {
+  .clubs-section-container,
+  .subscriptions-section-container,
+  .programs-section-container,
+  .benefits-section-container,
+  .about-section-container,
+  .contacts-section-container {
+    padding: 40px 32px 36px;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: currentColor;
-}
+*/
 
-button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  border: none;
+/* ===========================
+   SUBSCRIPTIONS SECTION
+   =========================== */
 
-  display: block;
-  cursor: pointer;
-}
-
-address {
-  font-style: normal;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Container */
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-/* Global */
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-
-  color: #434455;
-  background-color: #ffffff;
-}
-
-.hero-section,
-.clubs-section,
-.programs-section,
-.benefits-section,
-.about-section,
-.contacts-section,
-.footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-h2 {
-  margin-bottom: 30px;
-}
-
-h3 {
+.subscriptions-section-title {
   margin-bottom: 20px;
 }
 
-h1,
-h2,
-h3 {
-  letter-spacing: 0.03em;
+.subscriptions-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 22px;
 }
 
-nav,
-button {
-  text-transform: capitalize;
+.subscriptions-section-list-item {
+  padding: 18px 18px 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(249, 250, 251, 0.08);
+  background-color: var(--panel-soft);
+  transition: border-color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+  box-shadow: 0 16px 40px rgba(17, 18, 23, 0.9);
 }
 
-button {
-  color: #ffffff;
-  padding: 10px 15px;
-  z-index: 999;
-  border-radius: 5px;
-  background-color: #4d5ae5;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
-    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+.subscriptions-section-list-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(17, 18, 23, 0.98);
+  border-color: rgba(250, 204, 21, 0.6);
+  background-color: rgba(17, 18, 23, 0.98);
 }
 
-.logo {
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-}
-
-.manager-chat-btn {
+.subscriptions-section-list-title {
   font-size: 14px;
-
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-/* Header */
-.header-container {
+.subscriptions-section-price {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.subscriptions-section-list-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.subscriptions-section-button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .subscriptions-section-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .subscriptions-section-list-item {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .subscriptions-section-button {
+    width: auto;
+    padding-inline: 28px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .subscriptions-section-list-item {
+    width: calc((100% - 3 * 16px) / 4);
+  }
+}
+
+/* ===========================
+   PROGRAMS SECTION
+   =========================== */
+
+.programs-section-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.programs-section-list {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.programs-section-list-item-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--accent);
+  padding: 10px 12px;
+  border-radius: 999px;
+  background-color: rgba(17, 18, 23, 0.9);
+  border: 1px solid rgba(249, 250, 251, 0.09);
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast), border-color var(--transition-fast);
 }
 
-.header-logo {
-  padding: 20px 0;
+.programs-section-list-item-link::before {
+  content: '⬇';
+  font-size: 12px;
 }
 
-.header-logo .part-logo {
-  color: #2e2f42;
+.programs-section-list-item-link:hover {
+  background-color: rgba(17, 18, 23, 1);
+  border-color: rgba(250, 204, 21, 0.7);
+  transform: translateY(-2px);
 }
 
-.header-nav-list {
+.programs-section-subtitle {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.programs-section-list-start {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.programs-section-list-start-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: flex-start;
+  column-gap: 14px;
+  padding: 14px 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(249, 250, 251, 0.15);
+  background-color: rgba(17, 18, 23, 0.95);
+}
+
+.programs-section-list-start-span {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 204, 21, 0.8);
+  display: inline-flex;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: rgba(250, 204, 21, 0.15);
+  color: var(--text);
 }
 
-.header-nav-list-item-link {
-  display: block;
-  padding: 20px 0;
+.programs-section-list-start-title {
+  font-size: 15px;
+  margin-bottom: 6px;
 }
 
-/* Hero section */
-.hero-section {
-  padding: 200px 0;
-  color: #ffffff;
-
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  border-radius: 15px;
-  background-color: #212121;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 255, 0.15),
-      rgba(0, 0, 255, 0.15)
-    ),
-    url(https://ac.goit.global/fullstack/html-css-v2/module-4/autochecks/m04-human.jpg);
+.programs-section-list-start-text {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
-/* Clubs section */
-.clubs-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
+@media screen and (min-width: 768px) {
+  .programs-section-container {
+    padding: 32px 24px 30px;
+  }
+
+  .programs-section-list {
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .programs-section-list-item {
+    flex: 1;
+  }
+
+  .programs-section-list-start {
+    gap: 18px;
+  }
 }
 
-.clubs-section-list-item {
-  overflow: hidden;
-  width: calc((100% - 2 * 20px) / 3);
+@media screen and (min-width: 1158px) {
+  .programs-section-container {
+    padding: 40px 32px 36px;
+  }
+
+  .programs-section-list-start {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+
+  .programs-section-list-start-item:last-child {
+    grid-column: span 2;
+  }
 }
 
-.clubs-section-list-div {
-  padding: 20px;
-  min-height: 280px;
+/* ===========================
+   BENEFITS SECTION
+   =========================== */
+
+.benefits-section-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  max-width: 36rem;
 }
 
-/* Programs section */
-
-/* Benefits section */
 .benefits-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  counter-reset: benefits-counter;
 }
 
 .benefits-section-list-item {
-  width: calc((100% - 2 * 20px) / 3);
+  position: relative;
+  padding: 16px 14px 16px 52px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(249, 250, 251, 0.08);
+  background-color: rgba(17, 18, 23, 0.96);
+  transition: border-color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
-/* About section */
-
-/* Contacts section */
-
-/* Footer */
-.footer-logo {
-  padding: 20px 0;
+.benefits-section-list-item::before {
+  counter-increment: benefits-counter;
+  content: '0' counter(benefits-counter);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 204, 21, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  background-color: rgba(250, 204, 21, 0.15);
 }
 
-.footer-logo .part-logo {
-  color: #2e2f42;
+.benefits-section-list-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 46px rgba(17, 18, 23, 0.98);
+  border-color: rgba(250, 204, 21, 0.7);
+  background-color: rgba(17, 18, 23, 0.99);
+}
+
+.benefits-section-list-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-section-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .benefits-section-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ===========================
+   ABOUT SECTION
+   =========================== */
+
+.about-section-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.about-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.about-section-list-item {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 250, 251, 0.15);
+  background-color: rgba(17, 18, 23, 0.98);
+}
+
+.about-section-schedule-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.about-section-schedule-list {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-section-schedule-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .about-section-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    column-gap: 24px;
+    align-items: flex-start;
+  }
+
+  .about-section-text:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .about-section-list {
+    margin-top: 16px;
+  }
+}
+
+/* ===========================
+   CONTACTS SECTION
+   =========================== */
+
+.contacts-section-address {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.contacts-section-address a {
+  color: var(--accent);
+}
+
+.contacts-section-button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-section-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contacts-section-title {
+    flex: 1 1 50%;
+    margin-right: 12px;
+  }
+
+  .contacts-section-address {
+    flex: 1 1 40%;
+  }
+
+  .contacts-section-button {
+    align-self: flex-start;
+    width: auto;
+    padding-inline: 24px;
+  }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  border-top: 1px solid rgba(249, 250, 251, 0.06);
+  background-color: #111217;
+}
+
+.footer-container {
+  padding-top: 28px;
+  padding-bottom: 24px;
 }
 
 .footer-div {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.footer-logo {
+  padding-block: 4px;
+}
+
+.footer-logo .part-logo {
+  color: var(--accent);
 }
 
 .footer-nav-list {
   display: flex;
-  align-items: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 10px 18px;
 }
 
 .footer-nav-list-item-link {
-  display: block;
-  padding: 20px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer-nav-list-item-link:hover {
+  color: var(--text);
 }
 
 .footer-social-list {
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex-shrink: 0;
+  gap: 16px;
+}
+
+.footer-social-list-item-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 250, 251, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 18, 23, 0.98);
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-social-list-item-link:hover {
+  background-color: rgba(17, 18, 23, 1);
+  border-color: rgba(250, 204, 21, 0.7);
+  transform: translateY(-2px);
+}
+
+.footer-icon {
+  display: block;
+}
+
+.footer-copyright-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copyright-text {
+    text-align: right;
+  }
 }

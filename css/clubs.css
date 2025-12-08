@@ -1,0 +1,100 @@
+.clubs-section-text {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.clubs-section-title {
+  color: var(--accent);
+}
+
+.clubs-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.clubs-section-list-item {
+  background-color: var(--panel-soft);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px dashed rgba(249, 250, 251, 0.15);
+  transition: transform var(--transition-med), box-shadow var(--transition-med),
+    border-color var(--transition-med), background-color var(--transition-med);
+
+  border: 1px dashed rgba(55, 65, 81, 0.9);
+  background-color: rgba(17, 18, 23, 0.92);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.clubs-section-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 60px rgba(17, 18, 23, 0.98);
+  border-color: rgba(250, 204, 21, 0.6);
+  background-color: rgba(17, 18, 23, 0.98);
+}
+
+.clubs-section-list-item img {
+  border-radius: 20px;
+  width: 300px;
+  padding: 10px;
+}
+
+.clubs-section-list-div {
+  padding: 18px 18px 20px;
+}
+
+.clubs-section-list-item-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.clubs-section-list-item-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.clubs-section-list-item-link {
+  display: block;
+  text-align: center;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: #111217;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-transform: none;
+
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.clubs-section-list-item-link:hover,
+.clubs-section-list-item-link:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .clubs-section-list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .clubs-section-list {
+    flex-wrap: nowrap;
+  }
+
+  .clubs-section-list-item {
+    display: block;
+    width: calc((100% - 2 * 20px) / 3);
+    flex-direction: unset;
+    gap: unset;
+  }
+}

@@ -1,0 +1,113 @@
+.header {
+  padding: 15px 0;
+  background-color: rgba(17, 18, 23, 0.98);
+  border-bottom: 1px solid rgba(249, 250, 251, 0.08);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  padding: 0;
+  font-size: 18px;
+}
+
+.header-nav {
+  display: none;
+}
+
+.header-nav-button {
+  display: none;
+}
+
+/* Burger + close buttons */
+.header-burger-button,
+.mobile-menu-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.header-burger-button svg,
+.mobile-menu-close-button svg {
+  fill: #111217;
+}
+
+@media screen and (min-width: 768px) {
+  .header-burger-button {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-nav-list-item-link {
+    display: block;
+    padding-block: 4px;
+    font-size: 14px;
+    color: var(--text-muted);
+    position: relative;
+    transition: color var(--transition-fast);
+  }
+
+  .header-nav-list-item-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--accent);
+    transition: width var(--transition-fast);
+  }
+
+  .header-nav-list-item-link:hover::after,
+  .header-nav-list-item-link:focus-visible::after {
+    width: 100%;
+  }
+
+  .header-nav-list-item-link:hover,
+  .header-nav-list-item-link:focus-visible {
+    color: var(--text);
+  }
+
+  .header-nav-button {
+    background-color: var(--bg);
+    border: 1px solid var(--accent);
+    display: block;
+    padding: 7px 10px;
+    color: var(--accent);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-nav-list-item-link {
+    font-size: 16px;
+  }
+
+  .header-nav-button {
+    display: block;
+    padding: 7px 30px;
+  }
+}

@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO -->
-    <meta name="description" content="Planet Fitness description meta tag content" />
-    <title>Planet Fitness is the place for beginners and pros!</title>
+    <meta name="description"
+        content="Planet Fitness — beginner-friendly fitness clubs with smart training programs, memberships and healthy food bars to help you escape Planet Fatness." />
+    <title>Planet Fitness — Escape Planet Fatness</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Modern Normalize -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -28,28 +29,35 @@
     <header class="header">
         <div class="container header-container">
             <a class="logo header-logo" href="./index.html">
-                Planet
-                <span class="part-logo">Fitness</span>
+                Planet<span class="part-logo">Fitness</span>
             </a>
 
+            <!-- Burger button (mobile) -->
+            <button class="header-burger-button" type="button" data-menu-open aria-label="Open main menu"
+                aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="header-burger-button-icon" width="20" height="20" aria-label="Icon Burger Button">
+                    <use href="./images/icons.svg#icon-menu-button"></use>
+                </svg>
+            </button>
+
+            <!-- Desktop / Tablet navigation -->
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-list-item">
                         <a class="header-nav-list-item-link" href="#clubs">Clubs</a>
                     </li>
-
                     <li class="header-nav-list-item">
                         <a class="header-nav-list-item-link" href="#programs">Programs</a>
                     </li>
-
+                    <li class="header-nav-list-item">
+                        <a class="header-nav-list-item-link" href="#subscriptions">Plans</a>
+                    </li>
                     <li class="header-nav-list-item">
                         <a class="header-nav-list-item-link" href="#benefits">Benefits</a>
                     </li>
-
                     <li class="header-nav-list-item">
-                        <a class="header-nav-list-item-link" href="#about">About us</a>
+                        <a class="header-nav-list-item-link" href="#about">About</a>
                     </li>
-
                     <li class="header-nav-list-item">
                         <a class="header-nav-list-item-link" href="#contacts">Contacts</a>
                     </li>
@@ -57,97 +65,203 @@
             </nav>
 
             <button class="header-nav-button" type="button">Call us</button>
+
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobile-menu" data-menu>
+                <div class="container mobile-menu-container">
+                    <div class="mobile-menu-header">
+                        <a class="logo mobile-menu-logo" href="./index.html">
+                            Planet<span class="part-logo">Fitness</span>
+                        </a>
+
+                        <button class="mobile-menu-close-button" type="button" data-menu-close
+                            aria-label="Close main menu">
+                            <svg class="mobile-menu-close-button-icon" width="15" height="15"
+                                aria-label="Icon Close Button">
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <nav aria-label="Mobile main navigation">
+                        <ul class="mobile-menu-nav-list">
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#clubs">Clubs</a>
+                            </li>
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#programs">Programs</a>
+                            </li>
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#subscriptions">Plans</a>
+                            </li>
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#benefits">Benefits</a>
+                            </li>
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#about">About</a>
+                            </li>
+                            <li class="mobile-menu-nav-list-item">
+                                <a class="mobile-menu-nav-list-item-link nav-link" href="#contacts">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <ul class="mobile-menu-social-list">
+                        <li class="mobile-menu-social-list-item">
+                            <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg class="mobile-menu-social-list-icon" width="20" height="20"
+                                    aria-label="Icon Facebook">
+                                    <use href="./images/icons.svg#icon-facebook-logo"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="mobile-menu-social-list-item">
+                            <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg class="mobile-menu-social-list-icon" width="20" height="20"
+                                    aria-label="Icon Instagram">
+                                    <use href="./images/icons.svg#icon-instagram-logo"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="mobile-menu-social-list-item">
+                            <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg class="mobile-menu-social-list-icon" width="27" height="27"
+                                    aria-label="Icon Youtube">
+                                    <use href="./images/icons.svg#icon-youtube-logo"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
-    <maine>
-        <button type="button" class="manager-chat-btn">Contact manager</button>
+    <main>
+        <button type="button" class="manager-chat-btn">
+            Contact manager
+        </button>
 
+        <!-- Hero section -->
         <section class="hero-section">
             <div class="container hero-section-container">
-                <h1 class="hero-section-title">Planet Fitness</h1>
-                <p>
-                    Healthy food is delicious. Doing sport is enjoyable. You just need to start - people said. Nonsense!
-                </p>
-                <button class="hero-section-button" type="button">Write to us</button>
+                <div class="hero-section-container-div">
+                    <p class="hero-section-kicker">Beginner-friendly fitness</p>
+                    <h1 class="hero-section-title">
+                        Escape Planet Fatness <br />
+                        Train with Planet Fitness
+                    </h1>
+                    <p class="hero-section-text">
+                        Friendly coaches, smart training plans, and clubs with everything
+                        you need to finally enjoy working out — not just dream about it.
+                    </p>
+
+                    <ul class="hero-section-list">
+                        <li class="hero-section-list-item">
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-exercise-bicycle"></use>
+                            </svg>
+                        </li>
+
+                        <li class="hero-section-list-item">
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-exercise-kettlebell"></use>
+                            </svg>
+                        </li>
+
+                        <li class="hero-section-list-item">
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-weightlifting-svg"></use>
+                            </svg>
+                        </li>
+
+                        <li class="hero-section-list-item">
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-exercise-svg"></use>
+                            </svg>
+                        </li>
+
+                        <li class="hero-section-list-item">
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-running"></use>
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <button class="hero-section-button" type="button">
+                        Start your escape
+                    </button>
+                </div>
+
+
+                <img class="hero-photo" src="./images/image.png"
+                    alt="Plate with sweet cheese pancakes topped with berries" />
             </div>
         </section>
 
         <!-- Clubs section -->
-        <section class="clubs-section">
+        <section class="clubs-section" id="clubs">
             <div class="container clubs-section-container">
-                <h2 class="clubs-section-title" id="clubs">Find us near you</h2>
+                <h2 class="clubs-section-title">Find your club nearby</h2>
                 <p class="clubs-section-text">
-                    Get healthy, feel strong, and be happy! With 50+ classes on the menu, including classes, group
-                    fitness,
-                    and Personal Training, we have something for every taste. All the gyms and fitness studios in our
-                    chain
-                    are well-equipped facilities where you'll find all the amenities from WiFi, lockers and towels to
-                    sauna
-                    and jacuzzi. Our fitness bars are here to help you relax and refuel after your workout. The menu
-                    offers
-                    smoothies. soups, salads, and other healthy snacks prepared fresh daily. See where we're currently
-                    operating.
+                    Get healthy, feel strong, and stay motivated. With 50+ weekly
+                    classes, personal training, and cosy recovery zones, every club is
+                    designed to keep you coming back. All locations offer Wi-Fi,
+                    lockers, towels, saunas, jacuzzis, and a healthy food bar with
+                    fresh smoothies, soups, salads, and snacks. See where we're
+                    currently operating.
                 </p>
 
                 <ul class="clubs-section-list">
                     <li class="clubs-section-list-item">
-                        <img src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B031.jpg"
-                            alt="PF Power Zone. A modern gym equipped with treadmills." width="320">
+                        <img src="/images/B031.jpg"
+                            alt="PF Power Zone — a modern gym with treadmills and strength machines." width="320" />
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Power Zone</h3>
                             <p class="clubs-section-list-item-text">
-                                With full access membership you'll gain access to our state of the art gym floor and
-                                become
-                                a
-                                part of a supportive fitness community. Feel confident and strong, with equipment to
-                                challenge
-                                every level of fitness.
+                                Full access to our state-of-the-art gym floor and a supportive
+                                fitness community. Feel confident and strong with equipment
+                                that challenges every level.
                             </p>
-                            <a class="clubs-section-list-item-link" href="https://goo.gl/maps/qBnEfK5AingPLZgb9"
-                                target="_blank">
-                                Open in Google Map
+                            <a class="clubs-section-list-item-link" href="#" target="_blank">
+                                Open in Google Maps
                             </a>
                         </div>
                     </li>
 
                     <li class="clubs-section-list-item">
-                        <img src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B032.jpg"
-                            alt="PF Fit and Fast. A gym with indoor bikes behind a glass door." width="320">
+                        <img src="/images/B032.jpg" alt="PF Fit and Fast — a gym with indoor bikes behind a glass wall."
+                            width="320" />
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Fit and Fast</h3>
                             <p class="clubs-section-list-item-text">
-                                Small group training combines the focused attention of a private session with the energy
-                                of
-                                a
-                                group. With up to 5 people, the groups have their own program, training area and
-                                equipment.
+                                Small group training with up to 5 people. Get the focus of
+                                personal training and the energy of a class, with your own
+                                program, training zone, and equipment.
                             </p>
-                            <a class="clubs-section-list-item-link" href="https://goo.gl/maps/WZ4K6XMvHU7FkgWB7"
-                                target="_blank">
-                                Open in Google Map
+                            <a class="clubs-section-list-item-link" href="#" target="_blank">
+                                Open in Google Maps
                             </a>
                         </div>
                     </li>
 
                     <li class="clubs-section-list-item">
-                        <img src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B033.jpg"
-                            href="PF Body Sculpting. A studio with fitness balls and trx straps." width="320">
+                        <img src="/images/B033.jpg" alt="PF Body Sculpting — studio with fitness balls and TRX straps."
+                            width="320" />
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Body Sculpting</h3>
                             <p class="clubs-section-list-item-text">
-                                Our 1 on 1 private training is the best choice for people looking for a personalized
-                                program
-                                based on their goals. You will have your own training room with one of our experienced
-                                fitness
-                                coaches.
+                                Our 1-on-1 private training is perfect if you want a fully
+                                personalised program. Train in a separate studio with an
+                                experienced coach and move towards your goal at your pace.
                             </p>
-                            <a class="clubs-section-list-item-link" href="https://goo.gl/maps/UZqkiUqS6eWL5DJd7"
-                                target="_blank">
-                                Open in Google Map
+                            <a class="clubs-section-list-item-link" href="#" target="_blank">
+                                Open in Google Maps
                             </a>
                         </div>
                     </li>
@@ -155,24 +269,76 @@
             </div>
         </section>
 
+        <!-- Subscriptions section -->
+        <section class="subscriptions-section" id="subscriptions">
+            <div class="container subscriptions-section-container">
+                <h2 class="subscriptions-section-title">
+                    Choose your membership and train on your terms
+                </h2>
+
+                <ul class="subscriptions-section-list">
+                    <li class="subscriptions-section-list-item">
+                        <!-- place for icon if needed -->
+                        <h3 class="subscriptions-section-list-title">HALL • 1 MONTH</h3>
+                        <p class="subscriptions-section-price">from $45 / month</p>
+                        <p class="subscriptions-section-list-text">
+                            Great for trying out the club, rebooting your routine, or
+                            training during a short stay in the city.
+                        </p>
+                    </li>
+
+                    <li class="subscriptions-section-list-item">
+                        <!-- place for icon if needed -->
+                        <h3 class="subscriptions-section-list-title">HALL • 3 MONTHS</h3>
+                        <p class="subscriptions-section-price">from $120 / 3 months</p>
+                        <p class="subscriptions-section-list-text">
+                            Our most popular option for beginners who want to build a stable
+                            habit and see visible changes.
+                        </p>
+                    </li>
+
+                    <li class="subscriptions-section-list-item">
+                        <!-- place for icon if needed -->
+                        <h3 class="subscriptions-section-list-title">HALL • 6 MONTHS</h3>
+                        <p class="subscriptions-section-price">from $210 / 6 months</p>
+                        <p class="subscriptions-section-list-text">
+                            Perfect if you are serious about change: more time to progress,
+                            better price per month.
+                        </p>
+                    </li>
+
+                    <li class="subscriptions-section-list-item">
+                        <!-- place for icon if needed -->
+                        <h3 class="subscriptions-section-list-title">HALL • 12 MONTHS</h3>
+                        <p class="subscriptions-section-price">from $360 / 12 months</p>
+                        <p class="subscriptions-section-list-text">
+                            Maximum flexibility and savings for those who treat training as
+                            a lifestyle — not just a phase.
+                        </p>
+                    </li>
+                </ul>
+
+                <button class="subscriptions-section-button" type="button">
+                    Choose membership
+                </button>
+            </div>
+        </section>
+
         <!-- Programs section -->
-        <section class="programs-section">
+        <section class="programs-section" id="programs">
             <div class="container programs-section-container">
-                <h2 class="programs-section-title" id="programs">
-                    How to stop doubting and start exercising regularly
+                <h2 class="programs-section-title">
+                    How to stop doubting and start training regularly
                 </h2>
 
                 <p class="programs-section-text">
-                    Thousands of people dream about having a nice body. They start doing sport, face challenges and quit
-                    it
-                    in a few weeks or even days. Why does it happen? The problem is that people often do too much
-                    physical
-                    activity when their body is not ready for this load. Without allowing any recovery time between
-                    exercise
-                    sessions, they get tired quickly and lose motivation. We believe that you should have a smooth start
-                    and
-                    focus on developing a habit of doing sport regularly. So, we offer you a few training programs for
-                    beginners.
+                    Thousands of people dream about having a strong, healthy body. They
+                    start working out, face challenges, and quit after a few weeks or
+                    even days. Why does this happen? Often people push too hard when
+                    their body isn't ready. Without enough recovery, they get tired
+                    quickly and lose motivation. We believe in a smooth start and
+                    building a habit first. That's why we created easy-to-follow
+                    programs for beginners.
                 </p>
 
                 <ul class="programs-section-list">
@@ -200,61 +366,140 @@
                         </a>
                     </li>
                 </ul>
+
+                <h3 class="programs-section-subtitle">How to start?</h3>
+                <ul class="programs-section-list-start">
+                    <li class="programs-section-list-start-item">
+                        <span class="programs-section-list-start-span">1</span>
+                        <!-- place for step icon here -->
+                        <div class="programs-section-list-start-content">
+                            <h4 class="programs-section-list-start-title">
+                                Leave a request, call us, or visit the front desk
+                            </h4>
+                            <p class="programs-section-list-start-text">
+                                We'll help you choose the club, membership, and program that
+                                match your goals and schedule.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="programs-section-list-start-item">
+                        <span class="programs-section-list-start-span">2</span>
+                        <!-- place for step icon here -->
+                        <div class="programs-section-list-start-content">
+                            <h4 class="programs-section-list-start-title">
+                                Confirm your plan and pay from $45
+                            </h4>
+                            <p class="programs-section-list-start-text">
+                                We activate your card, explain the rules, and show you how to
+                                use your membership to the fullest.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="programs-section-list-start-item">
+                        <span class="programs-section-list-start-span">3</span>
+                        <!-- place for step icon here -->
+                        <div class="programs-section-list-start-content">
+                            <h4 class="programs-section-list-start-title">
+                                Get ready for your first training
+                            </h4>
+                            <p class="programs-section-list-start-text">
+                                Bring comfortable clothes, indoor shoes, a water bottle, and a
+                                small towel. That's all you need to start.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="programs-section-list-start-item">
+                        <span class="programs-section-list-start-span">4</span>
+                        <!-- place for step icon here -->
+                        <div class="programs-section-list-start-content">
+                            <h4 class="programs-section-list-start-title">
+                                Intro briefing with your trainer
+                            </h4>
+                            <p class="programs-section-list-start-text">
+                                Before the first workout, the trainer will walk you through
+                                the club, show how to use the equipment, and adapt the plan to
+                                your level.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="programs-section-list-start-item">
+                        <span class="programs-section-list-start-span">5</span>
+                        <!-- place for step icon here -->
+                        <div class="programs-section-list-start-content">
+                            <h4 class="programs-section-list-start-title">
+                                Enjoy your training and see progress
+                            </h4>
+                            <p class="programs-section-list-start-text">
+                                Train at your own pace, stay in touch with your coach, and
+                                celebrate every step towards a stronger, healthier you.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- Benefits section -->
-        <section class="benefits-section">
+        <section class="benefits-section" id="benefits">
             <div class="container benefits-section-container">
-                <h2 class="benefits-section-title" id="benefits">
-                    Why choose Planet Fitness?
-                </h2>
+                <h2 class="benefits-section-title">Why choose Planet Fitness?</h2>
                 <p class="benefits-section-text">
-                    We're bringing accessible, on-trend fitness to everyone! We are more than just a gym - we are a
-                    community. We are the crew to help you reach the goals.
+                    We're making accessible, on-trend fitness simple for everyone. Not
+                    just a gym — a community and a crew that helps you reach your goals.
                 </p>
 
                 <ol class="benefits-section-list">
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
+                        <!-- <svg class="benefits-section-icon"><use href="./images/icons.svg#icon-safe-zone"></use></svg> -->
                         <p class="benefits-section-list-text">
-                            No blames, no empty promises, no people who are talking about things they don't know about.
-                            Our mission is to create a
-                            safe space for you to change.
+                            No blame, no unrealistic promises. Our mission is to create a
+                            safe space where you can change at your own pace.
                         </p>
                     </li>
 
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            All our coaches are certified experts. You may have tried to work hard but we'll teach you
-                            to work smart.
+                            All our coaches are certified experts. Maybe you've tried to
+                            work hard — we'll teach you how to work smart.
                         </p>
                     </li>
 
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            Your diet is no less important than your training. We believe in an integrated approach
-                            which also includes dietitian's
-                            consultations and motivational activities.
+                            Your diet is just as important as your training. We offer
+                            access to dietitians and motivational events to support you from
+                            all sides.
                         </p>
                     </li>
 
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            Healthy menu require time and effort? Not in our healthy food bars. Let's discover the world
-                            of tasty low-calorie
-                            dishes.
+                            Healthy food doesn't have to be boring. Our bars serve tasty,
+                            low-calorie dishes, fresh smoothies, and snacks.
                         </p>
                     </li>
 
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            You pay for reaching your goal. And it's our job to help you reach it as soon as possible.
+                            You pay for reaching your goal. It's our job to help you get
+                            there as quickly and safely as possible.
                         </p>
                     </li>
 
                     <li class="benefits-section-list-item">
+                        <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            Regular exercise helps prevent or manage many health problems and concerns.
+                            Regular exercise helps prevent and manage many health concerns —
+                            from stress to heart and joint issues.
                         </p>
                     </li>
                 </ol>
@@ -262,55 +507,76 @@
         </section>
 
         <!-- About section -->
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="container about-section-container">
-                <h2 class="about-section-title" id="#about">About Planet Fitness</h2>
+                <h2 class="about-section-title">About Planet Fitness</h2>
                 <p class="about-section-text">
-                    Healthy food is delicious. Doing sport is enjoyable. You just need to start -
-                    people said. Nonsense! - I thought. To me, a 19-year-old guy, overweight and depressed, who ate tons
-                    of
-                    junk food to seize the stress, those healthy-life-gurus sounded like aliens coming from another
-                    planet.
-                    On their planet, it must have sounded right. On my planet, eating pizza was OK and jogging was
-                    exhausting. 12 years later, after I shed almost 100 pounds and completely changed my diet, I still
-                    believe we WERE on different planets. The thing is that once I escaped.
+                    “Healthy food is delicious. Working out is enjoyable. You just need
+                    to start,” people said. “Nonsense,” I thought. As a 19-year-old guy,
+                    overweight and exhausted, living on junk food to handle stress,
+                    those healthy-life gurus sounded like aliens from another planet.
+                    On their planet, running felt easy. On mine, pizza felt normal and
+                    jogging was torture.
                 </p>
 
                 <p class="about-section-text">
-                    Now I'm a coach with 7+ years of experience who founded the chain of sport clubs each having a
-                    fitness
-                    bar and assistance of psychologists, and dietitians. I'm sure that nothing will work until you know
-                    where you are and where you go. Possibly, you are now on the planet Fatness and want to escape it.
-                    Here
-                    I am to show you the way out. The gym itself is the spacecraft for you to reach a happy new life,
-                    with
-                    its fitness bars to adapt your body to new conditions and with friendly crew to motivate you and
-                    help on
-                    your way.
+                    Twelve years later, after losing almost 100 pounds and completely
+                    changing my lifestyle, I still believe we were on different
+                    planets. The difference is that I managed to escape. Today I am a
+                    coach with 7+ years of experience and the founder of a chain of
+                    clubs where fitness bars, psychologists, and dietitians work
+                    together. I know that nothing works until you understand where you
+                    are and where you want to go. Maybe right now you're on Planet
+                    Fatness and want to get out. Planet Fitness is your spacecraft: the
+                    gym is the cabin, the bar helps your body adapt, and our friendly
+                    crew keeps you motivated along the way.
                 </p>
+
+                <ul class="about-section-list">
+                    <li class="about-section-list-item">ATTENTION TO DETAILS</li>
+                    <li class="about-section-list-item">ATMOSPHERE AND STYLE</li>
+                    <li class="about-section-list-item">TRAINING SPACE</li>
+                    <li class="about-section-list-item">ACCESSIBILITY &amp; COMFORT</li>
+                </ul>
+
+                <h3 class="about-section-schedule-title">Work schedule</h3>
+                <ul class="about-section-schedule-list">
+                    <li>Monday 7:00–22:00</li>
+                    <li>Tuesday 7:00–22:00</li>
+                    <li>Wednesday 7:00–22:00</li>
+                    <li>Thursday 7:00–22:00</li>
+                    <li>Friday 7:00–22:00</li>
+                    <li>Saturday 9:00–21:00</li>
+                    <li>Sunday 9:00–21:00</li>
+                </ul>
             </div>
         </section>
 
         <!-- Contacts section -->
-        <section class="contacts-section">
+        <section class="contacts-section" id="contacts">
             <div class="container contacts-section-container">
-                <h2 class="contacts-section-title" id="#contacts">
-                    Do you want to know more? Contact us!
+                <h2 class="contacts-section-title">
+                    Want to know more? Let's talk.
                 </h2>
                 <address class="contacts-section-address">
-                    Call us: <a href="tel:+070174069900">+070174069900</a> <br />
-                    Email us: <a href="mailto:fitnessescape@doit.com">fitnessescape@doit.com</a> <br />
-                    You may also want to visit us: <br />
-                    Lorem Foundation <br />
+                    Call us:
+                    <a href="tel:+070174069900">+070 1740 69900</a> <br />
+                    Email us:
+                    <a href="mailto:fitnessescape@doit.com">fitnessescape@doit.com</a>
+                    <br />
+                    Visit us: <br />
+                    Fitness Escape Hub <br />
                     332E Jacked Ave <br />
                     Mountain View, CA 228322 <br />
                     USA
                 </address>
 
-                <button class="contacts-section-button" type="button">Request a callback</button>
+                <button class="contacts-section-button" type="button">
+                    Request a callback
+                </button>
             </div>
         </section>
-    </maine>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -326,19 +592,18 @@
                         <li class="footer-nav-list-item">
                             <a class="footer-nav-list-item-link" href="#clubs">Clubs</a>
                         </li>
-
                         <li class="footer-nav-list-item">
                             <a class="footer-nav-list-item-link" href="#programs">Programs</a>
                         </li>
-
+                        <li class="footer-nav-list-item">
+                            <a class="footer-nav-list-item-link" href="#subscriptions">Subscriptions</a>
+                        </li>
                         <li class="footer-nav-list-item">
                             <a class="footer-nav-list-item-link" href="#benefits">Benefits</a>
                         </li>
-
                         <li class="footer-nav-list-item">
                             <a class="footer-nav-list-item-link" href="#about">About us</a>
                         </li>
-
                         <li class="footer-nav-list-item">
                             <a class="footer-nav-list-item-link" href="#contacts">Contacts</a>
                         </li>
@@ -347,7 +612,7 @@
 
                 <ul class="footer-social-list">
                     <li class="footer-social-list-item">
-                        <a class="footer-sociall-list-item-link" href="#" target="_blank">
+                        <a class="footer-social-list-item-link" href="#" target="_blank" aria-label="Facebook">
                             <svg class="footer-icon" width="20" height="20">
                                 <use href="./images/icons.svg#icon-facebook-logo"></use>
                             </svg>
@@ -355,7 +620,8 @@
                     </li>
 
                     <li class="footer-social-list-item">
-                        <a class="footer-social-list-item-link" href="https://www.facebook.com/" target="_blank">
+                        <a class="footer-social-list-item-link" href="https://www.instagram.com/" target="_blank"
+                            aria-label="Instagram">
                             <svg class="footer-icon" width="20" height="20">
                                 <use href="./images/icons.svg#icon-instagram-logo"></use>
                             </svg>
@@ -363,7 +629,8 @@
                     </li>
 
                     <li class="footer-social-list-item">
-                        <a class="footer-social-list-item-link" href="https://www.youtube.com/" target="_blank">
+                        <a class="footer-social-list-item-link" href="https://www.youtube.com/" target="_blank"
+                            aria-label="YouTube">
                             <svg class="footer-icon" width="27" height="27">
                                 <use href="./images/icons.svg#icon-youtube-logo"></use>
                             </svg>
@@ -373,12 +640,16 @@
             </div>
 
             <p class="footer-copyright-text">
-                &copy; 2025 Planet Fitness, Ltd. All rights reserved. Unless otherwise indicated, all materials on the
-                page are copyrighted by Planet Fitness, Limited. All rights reserved. No part of this page, either text
-                or image may be used for any purpose.
+                &copy; 2025 Planet Fitness, Ltd. All rights reserved. Unless otherwise
+                indicated, all materials on this page are copyrighted by Planet
+                Fitness, Limited. No part of this page, either text or image, may be
+                used for any purpose without permission.
             </p>
         </div>
     </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/feedback-form.js"></script>
 </body>
 
 </html>
