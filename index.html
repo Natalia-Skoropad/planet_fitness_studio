@@ -76,7 +76,7 @@
 
                         <button class="mobile-menu-close-button" type="button" data-menu-close
                             aria-label="Close main menu">
-                            <svg class="mobile-menu-close-button-icon" width="15" height="15"
+                            <svg class="mobile-menu-close-button-icon" width="30" height="30"
                                 aria-label="Icon Close Button">
                                 <use href="./images/icons.svg#icon-close"></use>
                             </svg>
@@ -109,18 +109,18 @@
                     <ul class="mobile-menu-social-list">
                         <li class="mobile-menu-social-list-item">
                             <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
-                                <svg class="mobile-menu-social-list-icon" width="20" height="20"
+                                <svg class="mobile-menu-social-list-icon" width="25" height="25"
                                     aria-label="Icon Facebook">
-                                    <use href="./images/icons.svg#icon-facebook-logo"></use>
+                                    <use href="./images/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="mobile-menu-social-list-item">
                             <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
-                                <svg class="mobile-menu-social-list-icon" width="20" height="20"
+                                <svg class="mobile-menu-social-list-icon" width="25" height="25"
                                     aria-label="Icon Instagram">
-                                    <use href="./images/icons.svg#icon-instagram-logo"></use>
+                                    <use href="./images/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
@@ -129,7 +129,7 @@
                             <a class="mobile-menu-social-list-link" href="#" target="_blank" rel="noopener noreferrer">
                                 <svg class="mobile-menu-social-list-icon" width="27" height="27"
                                     aria-label="Icon Youtube">
-                                    <use href="./images/icons.svg#icon-youtube-logo"></use>
+                                    <use href="./images/icons.svg#icon-youtube"></use>
                                 </svg>
                             </a>
                         </li>
@@ -155,7 +155,7 @@
                     </h1>
                     <p class="hero-section-text">
                         Friendly coaches, smart training plans, and clubs with everything
-                        you need to finally enjoy working out — not just dream about it.
+                        you need to finally enjoy working out – not just dream about it.
                     </p>
 
                     <ul class="hero-section-list">
@@ -195,9 +195,22 @@
                     </button>
                 </div>
 
-
-                <img class="hero-photo" src="./images/image.png"
-                    alt="Plate with sweet cheese pancakes topped with berries" />
+                <picture class="hero-section-photo">
+                    <source srcset="
+                            ./images/hero/modern-gym-with-strength-training-equipment-desk.jpg 1x,
+                            ./images/hero/modern-gym-with-strength-training-equipment-desk@2x.jpg 2x
+                            " media="(min-width: 1158px)" />
+                    <source srcset="
+                            ./images/hero/modern-gym-with-strength-training-equipment-tab.jpg 1x,
+                            ./images/hero/modern-gym-with-strength-training-equipment-tab@2x.jpg 2x
+                            " media="(min-width: 768px)" />
+                    <source srcset="
+                            ./images/hero/modern-gym-with-strength-training-equipment-mobile.jpg 1x,
+                            ./images/hero/modern-gym-with-strength-training-equipment-mobile@2x.jpg 2x
+                            " media="(max-width: 767px)" />
+                    <img class="hero-photo" src="./images/hero/modern-gym-with-strength-training-equipment-mobile.jpg"
+                        alt="Modern gym interior with strength-training machines and LED ceiling lights" />
+                </picture>
             </div>
         </section>
 
@@ -215,9 +228,24 @@
                 </p>
 
                 <ul class="clubs-section-list">
-                    <li class="clubs-section-list-item">
-                        <img src="/images/B031.jpg"
-                            alt="PF Power Zone — a modern gym with treadmills and strength machines." width="320" />
+                    <li class="clubs-section-list-item ">
+                        <picture class="clubs-section-photo">
+                            <source srcset="
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-desk.jpg 1x,
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-desk@2x.jpg 2x
+                                    " media="(min-width: 1158px)" />
+                            <source srcset="
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-tab.jpg 1x,
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-tab@2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                            <source srcset="
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-mobile.jpg 1x,
+                                    ./images/clubs/modern-gym-interior-with-weight-benches-mobile@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                            <img class="clubs-photo"
+                                src="./images/clubs/modern-gym-interior-with-weight-benches-mobile.jpg"
+                                alt="Modern gym interior with weight benches and LED ceiling lights" />
+                        </picture>
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Power Zone</h3>
@@ -232,9 +260,9 @@
                         </div>
                     </li>
 
-                    <li class="clubs-section-list-item">
-                        <img src="/images/B032.jpg" alt="PF Fit and Fast — a gym with indoor bikes behind a glass wall."
-                            width="320" />
+                    <li class="clubs-section-list-item clubs-section-list-item-active">
+                        <img src="./images/B032.jpg"
+                            alt="PF Fit and Fast — a gym with indoor bikes behind a glass wall." width="320" />
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Fit and Fast</h3>
@@ -250,15 +278,15 @@
                     </li>
 
                     <li class="clubs-section-list-item">
-                        <img src="/images/B033.jpg" alt="PF Body Sculpting — studio with fitness balls and TRX straps."
+                        <img src="./images/B033.jpg" alt="PF Body Sculpting — studio with fitness balls and TRX straps."
                             width="320" />
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Body Sculpting</h3>
                             <p class="clubs-section-list-item-text">
-                                Our 1-on-1 private training is perfect if you want a fully
-                                personalised program. Train in a separate studio with an
-                                experienced coach and move towards your goal at your pace.
+                                Our 1-on-1 private training is perfect if you want a fully personalised program. Train
+                                in a separate studio with coach
+                                and move towards your goal at your pace.
                             </p>
                             <a class="clubs-section-list-item-link" href="#" target="_blank">
                                 Open in Google Maps
@@ -278,9 +306,11 @@
 
                 <ul class="subscriptions-section-list">
                     <li class="subscriptions-section-list-item">
-                        <!-- place for icon if needed -->
+                        <svg class="hero-section-list-icon" width="40" height="40">
+                            <use href="./images/icons.svg#icon-gym"></use>
+                        </svg>
                         <h3 class="subscriptions-section-list-title">HALL • 1 MONTH</h3>
-                        <p class="subscriptions-section-price">from $45 / month</p>
+                        <p class="subscriptions-section-price">$45 / month</p>
                         <p class="subscriptions-section-list-text">
                             Great for trying out the club, rebooting your routine, or
                             training during a short stay in the city.
@@ -288,19 +318,23 @@
                     </li>
 
                     <li class="subscriptions-section-list-item">
-                        <!-- place for icon if needed -->
+                        <svg class="hero-section-list-icon" width="40" height="40">
+                            <use href="./images/icons.svg#icon-stationary-bicycle-gymnast"></use>
+                        </svg>
                         <h3 class="subscriptions-section-list-title">HALL • 3 MONTHS</h3>
-                        <p class="subscriptions-section-price">from $120 / 3 months</p>
+                        <p class="subscriptions-section-price">$120 / 3 months</p>
                         <p class="subscriptions-section-list-text">
                             Our most popular option for beginners who want to build a stable
                             habit and see visible changes.
                         </p>
                     </li>
 
-                    <li class="subscriptions-section-list-item">
-                        <!-- place for icon if needed -->
+                    <li class="subscriptions-section-list-item subscriptions-section-list-item-active">
+                        <svg class="hero-section-list-icon" width="40" height="40">
+                            <use href="./images/icons.svg#icon-running-gym"></use>
+                        </svg>
                         <h3 class="subscriptions-section-list-title">HALL • 6 MONTHS</h3>
-                        <p class="subscriptions-section-price">from $210 / 6 months</p>
+                        <p class="subscriptions-section-price">$210 / 6 months</p>
                         <p class="subscriptions-section-list-text">
                             Perfect if you are serious about change: more time to progress,
                             better price per month.
@@ -308,12 +342,14 @@
                     </li>
 
                     <li class="subscriptions-section-list-item">
-                        <!-- place for icon if needed -->
+                        <svg class="hero-section-list-icon" width="40" height="40">
+                            <use href="./images/icons.svg#icon-dumbbell-weight"></use>
+                        </svg>
                         <h3 class="subscriptions-section-list-title">HALL • 12 MONTHS</h3>
-                        <p class="subscriptions-section-price">from $360 / 12 months</p>
+                        <p class="subscriptions-section-price">$360 / 12 months</p>
                         <p class="subscriptions-section-list-text">
                             Maximum flexibility and savings for those who treat training as
-                            a lifestyle — not just a phase.
+                            a lifestyle – not just a phase.
                         </p>
                     </li>
                 </ul>
@@ -346,7 +382,10 @@
                         <a class="programs-section-list-item-link"
                             href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Build-Muscles.pdf"
                             download="build-muscles-plan" target="_blank">
-                            Download «Build Muscles» training plan
+                            <svg class="hero-section-list-icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-download"></use>
+                            </svg>
+                            «Build Muscles» training plan
                         </a>
                     </li>
 
@@ -354,7 +393,10 @@
                         <a class="programs-section-list-item-link"
                             href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Burn-Fat.pdf"
                             download="burn-fat-plan" target="_blank">
-                            Download «Burn Fat» training plan
+                            <svg class="hero-section-list-icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-download"></use>
+                            </svg>
+                            «Burn Fat» training plan
                         </a>
                     </li>
 
@@ -362,7 +404,10 @@
                         <a class="programs-section-list-item-link"
                             href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Build-Strength&Mass.pdf"
                             download="strength-and-mass-plan" target="_blank">
-                            Download «Build Strength and Mass» training plan
+                            <svg class="hero-section-list-icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-download"></use>
+                            </svg>
+                            «Build Strength» training plan
                         </a>
                     </li>
                 </ul>
@@ -371,11 +416,16 @@
                 <ul class="programs-section-list-start">
                     <li class="programs-section-list-start-item">
                         <span class="programs-section-list-start-span">1</span>
-                        <!-- place for step icon here -->
                         <div class="programs-section-list-start-content">
+                            <div class="programs-start-icon">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-download"></use>
+                                </svg>
+                            </div>
                             <h4 class="programs-section-list-start-title">
                                 Leave a request, call us, or visit the front desk
                             </h4>
+
                             <p class="programs-section-list-start-text">
                                 We'll help you choose the club, membership, and program that
                                 match your goals and schedule.
@@ -385,8 +435,12 @@
 
                     <li class="programs-section-list-start-item">
                         <span class="programs-section-list-start-span">2</span>
-                        <!-- place for step icon here -->
-                        <div class="programs-section-list-start-content">
+                        <div class="programs-section-list-start-content programs-section-list-start-content-active">
+                            <div class="programs-start-icon">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-download"></use>
+                                </svg>
+                            </div>
                             <h4 class="programs-section-list-start-title">
                                 Confirm your plan and pay from $45
                             </h4>
@@ -399,8 +453,12 @@
 
                     <li class="programs-section-list-start-item">
                         <span class="programs-section-list-start-span">3</span>
-                        <!-- place for step icon here -->
                         <div class="programs-section-list-start-content">
+                            <div class="programs-start-icon">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-download"></use>
+                                </svg>
+                            </div>
                             <h4 class="programs-section-list-start-title">
                                 Get ready for your first training
                             </h4>
@@ -413,8 +471,12 @@
 
                     <li class="programs-section-list-start-item">
                         <span class="programs-section-list-start-span">4</span>
-                        <!-- place for step icon here -->
                         <div class="programs-section-list-start-content">
+                            <div class="programs-start-icon">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-download"></use>
+                                </svg>
+                            </div>
                             <h4 class="programs-section-list-start-title">
                                 Intro briefing with your trainer
                             </h4>
@@ -426,10 +488,14 @@
                         </div>
                     </li>
 
-                    <li class="programs-section-list-start-item">
+                    <li class="programs-section-list-start-item ">
                         <span class="programs-section-list-start-span">5</span>
-                        <!-- place for step icon here -->
-                        <div class="programs-section-list-start-content">
+                        <div class="programs-section-list-start-content programs-section-list-start-content-active">
+                            <div class="programs-start-icon">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-download"></use>
+                                </svg>
+                            </div>
                             <h4 class="programs-section-list-start-title">
                                 Enjoy your training and see progress
                             </h4>
@@ -449,11 +515,11 @@
                 <h2 class="benefits-section-title">Why choose Planet Fitness?</h2>
                 <p class="benefits-section-text">
                     We're making accessible, on-trend fitness simple for everyone. Not
-                    just a gym — a community and a crew that helps you reach your goals.
+                    just a gym – a community and a crew that helps you reach your goals.
                 </p>
 
                 <ol class="benefits-section-list">
-                    <li class="benefits-section-list-item">
+                    <li class="benefits-section-list-item benefits-section-list-item-active">
                         <!-- icon placeholder -->
                         <!-- <svg class="benefits-section-icon"><use href="./images/icons.svg#icon-safe-zone"></use></svg> -->
                         <p class="benefits-section-list-text">
@@ -466,11 +532,11 @@
                         <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
                             All our coaches are certified experts. Maybe you've tried to
-                            work hard — we'll teach you how to work smart.
+                            work hard – we'll teach you how to work smart.
                         </p>
                     </li>
 
-                    <li class="benefits-section-list-item">
+                    <li class="benefits-section-list-item benefits-section-list-item-active">
                         <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
                             Your diet is just as important as your training. We offer
@@ -487,7 +553,7 @@
                         </p>
                     </li>
 
-                    <li class="benefits-section-list-item">
+                    <li class="benefits-section-list-item benefits-section-list-item-active">
                         <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
                             You pay for reaching your goal. It's our job to help you get
@@ -498,7 +564,7 @@
                     <li class="benefits-section-list-item">
                         <!-- icon placeholder -->
                         <p class="benefits-section-list-text">
-                            Regular exercise helps prevent and manage many health concerns —
+                            Regular exercise helps prevent and manage many health concerns –
                             from stress to heart and joint issues.
                         </p>
                     </li>
@@ -510,26 +576,21 @@
         <section class="about-section" id="about">
             <div class="container about-section-container">
                 <h2 class="about-section-title">About Planet Fitness</h2>
+
                 <p class="about-section-text">
-                    “Healthy food is delicious. Working out is enjoyable. You just need
-                    to start,” people said. “Nonsense,” I thought. As a 19-year-old guy,
-                    overweight and exhausted, living on junk food to handle stress,
-                    those healthy-life gurus sounded like aliens from another planet.
-                    On their planet, running felt easy. On mine, pizza felt normal and
-                    jogging was torture.
+                    “Healthy food is delicious. Working out is enjoyable. You just need to start,” people said.
+                    “Nonsense,” I thought. As a 19-year-old guy, overweight and exhausted, living on junk food
+                    to handle stress, those healthy-life gurus sounded like aliens from another planet. On their
+                    planet, running felt easy. On mine, pizza felt normal and jogging was torture.
                 </p>
 
                 <p class="about-section-text">
-                    Twelve years later, after losing almost 100 pounds and completely
-                    changing my lifestyle, I still believe we were on different
-                    planets. The difference is that I managed to escape. Today I am a
-                    coach with 7+ years of experience and the founder of a chain of
-                    clubs where fitness bars, psychologists, and dietitians work
-                    together. I know that nothing works until you understand where you
-                    are and where you want to go. Maybe right now you're on Planet
-                    Fatness and want to get out. Planet Fitness is your spacecraft: the
-                    gym is the cabin, the bar helps your body adapt, and our friendly
-                    crew keeps you motivated along the way.
+                    Twelve years later, after losing almost 100 pounds and completely changing my lifestyle,
+                    I still believe we were on different planets. The difference is that I managed to escape.
+                    Today I am a coach with 7+ years of experience and the founder of a chain of clubs where
+                    fitness bars, psychologists, and dietitians work together. Planet Fitness is your spacecraft:
+                    the gym is the cabin, the bar helps your body adapt, and our friendly crew keeps you
+                    motivated along the way.
                 </p>
 
                 <ul class="about-section-list">
@@ -541,13 +602,13 @@
 
                 <h3 class="about-section-schedule-title">Work schedule</h3>
                 <ul class="about-section-schedule-list">
-                    <li>Monday 7:00–22:00</li>
-                    <li>Tuesday 7:00–22:00</li>
-                    <li>Wednesday 7:00–22:00</li>
-                    <li>Thursday 7:00–22:00</li>
-                    <li>Friday 7:00–22:00</li>
-                    <li>Saturday 9:00–21:00</li>
-                    <li>Sunday 9:00–21:00</li>
+                    <li>Monday 7:00 AM – 10:00 PM</li>
+                    <li>Tuesday 7:00 AM – 10:00 PM</li>
+                    <li>Wednesday 7:00 AM – 10:00 PM</li>
+                    <li>Thursday 7:00 AM – 10:00 PM</li>
+                    <li>Friday 7:00 AM – 10:00 PM</li>
+                    <li>Saturday 9:00 AM – 9:00 PM</li>
+                    <li>Sunday 9:00 AM – 9:00 PM</li>
                 </ul>
             </div>
         </section>
@@ -556,24 +617,31 @@
         <section class="contacts-section" id="contacts">
             <div class="container contacts-section-container">
                 <h2 class="contacts-section-title">
-                    Want to know more? Let's talk.
+                    Want to know more? Let's talk
                 </h2>
-                <address class="contacts-section-address">
-                    Call us:
-                    <a href="tel:+070174069900">+070 1740 69900</a> <br />
-                    Email us:
-                    <a href="mailto:fitnessescape@doit.com">fitnessescape@doit.com</a>
-                    <br />
-                    Visit us: <br />
-                    Fitness Escape Hub <br />
-                    332E Jacked Ave <br />
-                    Mountain View, CA 228322 <br />
-                    USA
-                </address>
+                <div class="contacts-section-div">
+                    <div>
+                        <address class="contacts-section-address">
+                            Call us:
+                            <a href="tel:+070174069900">+070 1740 69900</a> <br />
+                            Email us:
+                            <a href="mailto:fitnessescape@doit.com">fitnessescape@doit.com</a>
+                            <br />
+                            Visit us: <br />
+                            Fitness Escape Hub <br />
+                            332E Jacked Ave <br />
+                            Mountain View, CA 228322 <br />
+                            USA
+                        </address>
 
-                <button class="contacts-section-button" type="button">
-                    Request a callback
-                </button>
+                        <button class="contacts-section-button" type="button">
+                            Request a callback
+                        </button>
+                    </div>
+
+                    <img class="hero-photo" src="./images/image.png"
+                        alt="Plate with sweet cheese pancakes topped with berries" />
+                </div>
             </div>
         </section>
     </main>
@@ -583,10 +651,8 @@
         <div class="container footer-container">
             <div class="footer-div">
                 <a class="logo footer-logo" href="./index.html">
-                    Planet
-                    <span class="part-logo">Fitness</span>
+                    Planet<span class="part-logo">Fitness</span>
                 </a>
-
                 <nav class="footer-nav">
                     <ul class="footer-nav-list">
                         <li class="footer-nav-list-item">

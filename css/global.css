@@ -77,52 +77,65 @@ h3 {
   margin-bottom: 15px;
 }
 
-.clubs-section-title,
-.subscriptions-section-title,
-.programs-section-title,
-.benefits-section-title,
-.about-section-title,
-.contacts-section-title {
-  position: relative;
-  padding-top: 15px;
-}
-
-.clubs-section-title::before,
-.subscriptions-section-title::before,
-.programs-section-title::before,
-.benefits-section-title::before,
-.about-section-title::before,
-.contacts-section-title::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 999px;
-  background-color: var(--accent);
-  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.8);
+.hero-section-text,
+.clubs-section-text,
+.programs-section-text,
+.benefits-section-text,
+.subscriptions-section-list-text,
+.about-section-text {
+  font-size: 16px;
+  color: var(--text-muted);
 }
 
 /* ===========================
-   BUTTONS
+   BUTTONS (UTILITY + DEFAULT)
    =========================== */
 
 button {
-  padding: 10px 25px;
-  border-radius: 8px;
-  background-color: var(--accent);
-  color: #111217;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.2;
   text-transform: none;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 25px;
+  border-radius: 8px;
 
   transition: transform var(--transition-fast),
     box-shadow var(--transition-fast);
 }
 
+.btn-primary,
+button {
+  background-color: var(--accent);
+  color: #111217;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
 button:hover,
 button:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.1);
+}
+
+.btn-outline,
+.header-nav-button {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible,
+.header-nav-button:hover,
+.header-nav-button:focus-visible {
   transform: translateY(-1px) scale(1.02);
   box-shadow: 0 0px 60px rgba(250, 204, 21, 0.1);
 }
@@ -144,6 +157,165 @@ button:focus-visible {
 }
 
 /* ===========================
+   PILL-BADGE
+   (hero kicker + about tags)
+   =========================== */
+
+.pill-badge,
+.hero-section-kicker,
+.about-section-list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px dashed rgba(55, 65, 81, 0.9);
+
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pill-badge::before,
+.hero-section-kicker::before,
+.about-section-list-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.18);
+}
+
+/* ===========================
+   ROUND SOCIAL ICONS
+   (UTILITY)
+   =========================== */
+
+.social-circle,
+.footer-social-list-item-link,
+.mobile-menu-social-list-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: var(--accent);
+
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.social-circle:hover,
+.social-circle:focus-visible,
+.footer-social-list-item-link:hover,
+.footer-social-list-item-link:focus-visible,
+.mobile-menu-social-list-link:hover,
+.mobile-menu-social-list-link:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.1);
+}
+
+/* ===========================
+   SECTION TITLES WITH ACCENT LINE
+   (About / Clubs / Programs)
+   =========================== */
+
+.about-section-title,
+.clubs-section-title,
+.programs-section-title {
+  position: relative;
+  padding-top: 15px;
+}
+
+.about-section-title::before,
+.clubs-section-title::before,
+.programs-section-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background-color: var(--accent);
+  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.5);
+}
+
+/* ===========================
+   GLASS PANEL CONTAINERS
+   (Hero / Benefits / Subscriptions / Contacts)
+   =========================== */
+
+.hero-section-container,
+.benefits-section-container,
+.subscriptions-section-container,
+.contacts-section-container {
+  position: relative;
+  border-radius: 15px;
+  padding: 50px 30px;
+  border: 1px dashed rgba(55, 65, 81, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section-container,
+.benefits-section-container,
+.subscriptions-section-container,
+.contacts-section-container {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(17, 18, 23, 0.99),
+      rgba(17, 18, 23, 0.99)
+    ),
+    url('../images/image.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* ===========================
+   DASHED CARDS
+   (clubs / subscriptions / benefits / steps)
+   =========================== */
+
+.clubs-section-list-item,
+.subscriptions-section-list-item,
+.benefits-section-list-item,
+.programs-section-list-start-content {
+  position: relative;
+  border-radius: 15px;
+  border: 1px dashed rgba(55, 65, 81, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  transition: transform var(--transition-med), box-shadow var(--transition-med),
+    border-color var(--transition-med), background-color var(--transition-med);
+}
+
+.clubs-section-list-item:hover,
+.clubs-section-list-item:focus,
+.subscriptions-section-list-item:hover,
+.benefits-section-list-item:hover,
+.programs-section-list-start-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(17, 18, 23, 0.98);
+  border-color: rgba(250, 204, 21, 0.6);
+  background-color: rgba(17, 18, 23, 0.98);
+}
+
+.clubs-section-list-item-active,
+.subscriptions-section-list-item-active,
+.benefits-section-list-item-active,
+.programs-section-list-start-content-active {
+  border-color: rgba(250, 204, 21, 0.6);
+}
+
+/* ===========================
    FLOATING MANAGER BUTTON
    =========================== */
 
@@ -154,7 +326,7 @@ button:focus-visible {
   z-index: 999;
 
   padding-inline: 22px;
-  background-color: var(--accent);
+  background-color: #ff7a1f;
   color: #111217;
   box-shadow: 0 20px 55px rgba(17, 18, 23, 1);
   animation: manager-pulse 2.6s infinite;
@@ -162,7 +334,7 @@ button:focus-visible {
 
 @keyframes manager-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7);
+    box-shadow: 0 0 0 0 #ff7a1f;
   }
   70% {
     box-shadow: 0 0 0 14px rgba(250, 204, 21, 0);

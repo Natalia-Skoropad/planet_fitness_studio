@@ -49,6 +49,10 @@
     display: block;
   }
 
+  .header-logo {
+    font-size: 16px;
+  }
+
   .header-nav-list {
     display: flex;
     align-items: center;
@@ -87,19 +91,18 @@
   }
 
   .header-nav-button {
-    background-color: var(--bg);
-    border: 1px solid var(--accent);
-    display: block;
-    padding: 7px 10px;
-    color: var(--accent);
+    display: inline-flex;
+    padding: 7px 14px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .header-nav-list {
-    display: flex;
-    align-items: center;
     gap: 40px;
+  }
+
+  .header-logo {
+    font-size: 18px;
   }
 
   .header-nav-list-item-link {
@@ -107,7 +110,6 @@
   }
 
   .header-nav-button {
-    display: block;
-    padding: 7px 30px;
+    padding-inline: 30px;
   }
 }

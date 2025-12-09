@@ -65,32 +65,10 @@
   gap: 30px;
 }
 
-.mobile-menu-social-list-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-  background-color: var(--accent);
-
-  transition: transform var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.mobile-menu-social-list-link:hover,
-.mobile-menu-social-list-link:focus {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 0px 60px rgba(250, 204, 21, 0.1);
-}
-
 .mobile-menu-social-list-item svg {
   fill: #111217;
 }
 
-/* Scroll lock when menu is open */
 body.no-scroll {
   overflow: hidden;
 }
