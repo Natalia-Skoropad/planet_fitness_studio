@@ -177,6 +177,8 @@ button:focus-visible {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  box-shadow: 0 8px 22px rgba(17, 18, 23, 0.9);
 }
 
 .pill-badge::before,
@@ -210,6 +212,8 @@ button:focus-visible {
 
   transition: transform var(--transition-fast),
     box-shadow var(--transition-fast);
+
+  flex-shrink: 0;
 }
 
 .social-circle:hover,

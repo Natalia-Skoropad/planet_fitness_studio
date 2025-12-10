@@ -4,7 +4,7 @@
 }
 
 .contacts-section-address {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-muted);
   margin-bottom: 18px;
 }
@@ -18,30 +18,39 @@
 }
 
 .contacts-section-container img {
-  width: 320px;
+  display: block;
+  max-width: 320px;
   border-radius: 15px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.9);
 }
 
 .contacts-section-div {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .contacts-section-div {
-    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
   .contacts-section-container img {
-    width: 350px;
+    max-width: 400px;
   }
 
   .contacts-section-button {
     align-self: flex-start;
     width: auto;
     padding-inline: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .contacts-section-container img {
+    max-width: 700px;
   }
 }

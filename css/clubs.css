@@ -18,6 +18,8 @@
   height: auto;
   border-radius: 15px;
   object-fit: cover;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.9);
 }
 
 .clubs-section-list-div {

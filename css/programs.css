@@ -17,8 +17,10 @@
   color: var(--text);
   padding: 10px 12px;
   border-radius: 15px;
-  border: 1px solid rgba(55, 65, 81, 0.9);
+
+  border: 1px dashed rgba(55, 65, 81, 0.9);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+
   transition: transform var(--transition-med), box-shadow var(--transition-med),
     border-color var(--transition-med), background-color var(--transition-med);
 }
@@ -91,7 +93,6 @@
 
 .programs-section-list-start-title {
   font-size: 16px;
-  margin-bottom: 6px;
   max-width: 170px;
 }
 
@@ -101,12 +102,10 @@
 }
 
 .programs-section-list-start-content {
-  position: relative;
   padding: 20px;
   margin-left: 20px;
 
   border: 1px dashed rgba(55, 65, 81, 0.9);
-  background-color: rgba(17, 18, 23, 0.92);
   border-radius: 15px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 
@@ -121,13 +120,21 @@
   background-color: rgba(17, 18, 23, 0.98);
 }
 
-.programs-start-icon {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+.programs-section-list-start-content-active {
+  border-color: rgba(250, 204, 21, 0.6);
+}
 
-  width: 40px;
-  height: 40px;
+.programs-section-list-start-content-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.programs-start-icon {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
 
   display: flex;
   align-items: center;
@@ -137,12 +144,13 @@
   border: 1px dashed rgba(55, 65, 81, 0.9);
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
 }
 
 .programs-start-icon svg {
   fill: var(--accent);
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -155,7 +163,7 @@
   }
 
   .programs-section-list-start-title {
-    max-width: 250px;
+    max-width: 210px;
   }
 
   .programs-section-list-start::before {
@@ -193,6 +201,14 @@
     grid-column: 1;
     text-align: right;
   }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .programs-section-list-start {
+    gap: 0;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -201,6 +217,10 @@
   }
 
   .programs-section-list-start-title {
-    max-width: 400px;
+    max-width: 300px;
+  }
+
+  .programs-section-list-start-item {
+    grid-template-columns: 1fr 150px 1fr;
   }
 }
