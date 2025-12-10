@@ -1,0 +1,236 @@
+/* ===========================
+   MODAL BACKDROP
+   =========================== */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+      900px 600px at 80% 0%,
+      rgba(250, 204, 21, 0.08),
+      transparent 90%
+    ),
+    rgba(0, 0, 0, 0.8);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms ease-out, visibility 250ms ease-out;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ===========================
+   MODAL WINDOW
+   =========================== */
+
+.modal {
+  width: min(320px, 100% - 32px);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+
+  padding: 20px;
+  border-radius: 15px;
+
+  background-color: var(--panel-soft);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.modal-logo {
+  font-size: 18px;
+  padding-block: 4px;
+}
+
+.modal-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--accent);
+
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.modal-close-button-icon {
+  fill: #111217;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 60px rgba(250, 204, 21, 0.2);
+  background-color: #f5c000;
+}
+
+.title-close-modal {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   FORM
+   =========================== */
+
+.user-information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form-input {
+  max-width: 540px;
+  padding: 10px 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background-color: #05060a;
+
+  font-size: 14px;
+  color: var(--text);
+
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.modal-select {
+  width: 100%;
+}
+
+.modal-form-input::placeholder {
+  color: #6b7280;
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus-visible {
+  outline: none;
+  border-color: rgba(250, 204, 21, 0.8);
+  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.5);
+  background-color: rgba(17, 18, 23, 0.96);
+}
+
+/* select + arrow */
+.modal-wrapper {
+  position: relative;
+}
+
+.modal-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.modal-select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: var(--accent);
+}
+
+/* textarea */
+textarea.modal-form-input {
+  min-height: 140px;
+}
+
+/* ===========================
+   CONSENT
+   =========================== */
+
+.modal-consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+.modal-consent-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-consent-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background-color: #05060a;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast),
+    background-color var(--transition-fast);
+
+  cursor: pointer;
+}
+
+.modal-consent-check {
+  opacity: 0;
+  fill: var(--accent);
+  transition: opacity var(--transition-fast);
+}
+
+.modal-consent-input:checked + .modal-consent-box {
+  border-color: rgba(250, 204, 21, 0.9);
+  background-color: rgba(250, 204, 21, 0.1);
+}
+
+.modal-consent-input:checked + .modal-consent-box .modal-consent-check {
+  opacity: 1;
+}
+
+.modal-consent-text a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+
+.modal-form-button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: min(540px, 100% - 32px);
+  }
+}
