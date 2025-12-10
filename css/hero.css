@@ -3,7 +3,7 @@
   border-radius: 15px;
   padding: 50px 30px;
 
-  border: 1px dashed rgba(55, 65, 81, 0.9);
+  border: 1px solid rgba(55, 65, 81, 0.9);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 
   display: flex;
@@ -44,7 +44,21 @@
   align-items: center;
   gap: 20px;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-section-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+
+  border-radius: 10px;
+  border: 1px dashed rgba(55, 65, 81, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-section-list-icon {
@@ -74,5 +88,11 @@
 
   .hero-photo {
     min-width: 500px;
+  }
+
+  .hero-section-list-item {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
   }
 }

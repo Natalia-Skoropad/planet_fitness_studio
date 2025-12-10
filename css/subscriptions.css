@@ -15,10 +15,6 @@
 }
 
 .subscriptions-section-list-item .hero-section-list-icon {
-  position: absolute;
-  top: 18px;
-  right: 24px;
-
   width: 40px;
   height: 40px;
   padding: 8px;
@@ -30,6 +26,13 @@
   fill: var(--accent);
   display: block;
   pointer-events: none;
+
+  flex-shrink: 0;
+}
+
+.subscriptions-section-list-item-div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .subscriptions-section-list-title {

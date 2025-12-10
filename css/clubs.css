@@ -68,6 +68,10 @@
   .clubs-photo {
     min-width: 250px;
   }
+
+  .clubs-section-list-div {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -84,5 +88,9 @@
 
   .clubs-photo {
     min-width: 350px;
+  }
+
+  .clubs-section-list-div {
+    padding-left: 0;
   }
 }

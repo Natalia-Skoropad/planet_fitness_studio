@@ -261,8 +261,23 @@
                     </li>
 
                     <li class="clubs-section-list-item clubs-section-list-item-active">
-                        <img src="./images/B032.jpg"
-                            alt="PF Fit and Fast — a gym with indoor bikes behind a glass wall." width="320" />
+                        <picture class="clubs-section-photo">
+                            <source srcset="
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-desk.jpg    1x,
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-desk@2x.jpg 2x
+                                    " media="(min-width: 1158px)" />
+                            <source srcset="
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-tab.jpg    1x,
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-tab@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                            <source srcset="
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-mobile.jpg    1x,
+                                    ./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-mobile@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                            <img class="clubs-photo"
+                                src="./images/clubs/cardio-zone-with-bikes-and-hexagon-lights-mobile.jpg"
+                                alt="Cardio zone with exercise bikes in a modern gym with hexagon ceiling lights" />
+                        </picture>
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Fit and Fast</h3>
@@ -278,8 +293,22 @@
                     </li>
 
                     <li class="clubs-section-list-item">
-                        <img src="./images/B033.jpg" alt="PF Body Sculpting — studio with fitness balls and TRX straps."
-                            width="320" />
+                        <picture class="clubs-section-photo">
+                            <source srcset="
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-desk.jpg    1x,
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-desk@2x.jpg 2x
+                                    " media="(min-width: 1158px)" />
+                            <source srcset="
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-tab.jpg    1x,
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-tab@2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                            <source srcset="
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-mobile.jpg    1x,
+                                    ./images/clubs/treadmill-zone-with-hexagon-lights-mobile@2x.jpg 2x
+                                    " media="(max-width: 767px)" />
+                            <img class="clubs-photo" src="./images/clubs/treadmill-zone-with-hexagon-lights-mobile.jpg"
+                                alt="Row of treadmills in a modern gym with hexagon ceiling lights" />
+                        </picture>
 
                         <div class="clubs-section-list-div">
                             <h3 class="clubs-section-list-item-title">PF Body Sculpting</h3>
@@ -306,11 +335,16 @@
 
                 <ul class="subscriptions-section-list">
                     <li class="subscriptions-section-list-item">
-                        <svg class="hero-section-list-icon" width="40" height="40">
-                            <use href="./images/icons.svg#icon-gym"></use>
-                        </svg>
-                        <h3 class="subscriptions-section-list-title">HALL • 1 MONTH</h3>
-                        <p class="subscriptions-section-price">$45 / month</p>
+                        <div class="subscriptions-section-list-item-div">
+                            <div>
+                                <h3 class="subscriptions-section-list-title">HALL • 1 MONTH</h3>
+                                <p class="subscriptions-section-price">$45 / month</p>
+                            </div>
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-gym"></use>
+                            </svg>
+                        </div>
+
                         <p class="subscriptions-section-list-text">
                             Great for trying out the club, rebooting your routine, or
                             training during a short stay in the city.
@@ -318,11 +352,16 @@
                     </li>
 
                     <li class="subscriptions-section-list-item">
-                        <svg class="hero-section-list-icon" width="40" height="40">
-                            <use href="./images/icons.svg#icon-stationary-bicycle-gymnast"></use>
-                        </svg>
-                        <h3 class="subscriptions-section-list-title">HALL • 3 MONTHS</h3>
-                        <p class="subscriptions-section-price">$120 / 3 months</p>
+                        <div class="subscriptions-section-list-item-div">
+                            <div>
+                                <h3 class="subscriptions-section-list-title">HALL • 3 MONTHS</h3>
+                                <p class="subscriptions-section-price">$120 / 3 months</p>
+                            </div>
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-stationary-bicycle-gymnast"></use>
+                            </svg>
+                        </div>
+
                         <p class="subscriptions-section-list-text">
                             Our most popular option for beginners who want to build a stable
                             habit and see visible changes.
@@ -330,11 +369,16 @@
                     </li>
 
                     <li class="subscriptions-section-list-item subscriptions-section-list-item-active">
-                        <svg class="hero-section-list-icon" width="40" height="40">
-                            <use href="./images/icons.svg#icon-running-gym"></use>
-                        </svg>
-                        <h3 class="subscriptions-section-list-title">HALL • 6 MONTHS</h3>
-                        <p class="subscriptions-section-price">$210 / 6 months</p>
+                        <div class="subscriptions-section-list-item-div">
+                            <div>
+                                <h3 class="subscriptions-section-list-title">HALL • 6 MONTHS</h3>
+                                <p class="subscriptions-section-price">$210 / 6 months</p>
+                            </div>
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-running-gym"></use>
+                            </svg>
+                        </div>
+
                         <p class="subscriptions-section-list-text">
                             Perfect if you are serious about change: more time to progress,
                             better price per month.
@@ -342,11 +386,16 @@
                     </li>
 
                     <li class="subscriptions-section-list-item">
-                        <svg class="hero-section-list-icon" width="40" height="40">
-                            <use href="./images/icons.svg#icon-dumbbell-weight"></use>
-                        </svg>
-                        <h3 class="subscriptions-section-list-title">HALL • 12 MONTHS</h3>
-                        <p class="subscriptions-section-price">$360 / 12 months</p>
+                        <div class="subscriptions-section-list-item-div">
+                            <div>
+                                <h3 class="subscriptions-section-list-title">HALL • 12 MONTHS</h3>
+                                <p class="subscriptions-section-price">$360 / 12 months</p>
+                            </div>
+                            <svg class="hero-section-list-icon" width="40" height="40">
+                                <use href="./images/icons.svg#icon-dumbbell-weight"></use>
+                            </svg>
+                        </div>
+
                         <p class="subscriptions-section-list-text">
                             Maximum flexibility and savings for those who treat training as
                             a lifestyle – not just a phase.
