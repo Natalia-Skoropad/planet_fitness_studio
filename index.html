@@ -157,9 +157,21 @@
     </header>
 
     <main>
-        <button type="button" class="manager-chat-btn" data-modal-open>
-            Contact manager
-        </button>
+        <div class="manager-chat-btn-div">
+            <button class="manager-chat-btn" type="button" data-modal-open>
+                <svg class="sticky-widget-arrow-icon" width="25" height="25" aria-hidden="true">
+                    <use href="./images/icons.svg#icon-conversation"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="sticky-widget-div">
+            <button class="sticky-widget-div-button" type="button" aria-label="Back to top">
+                <svg class="sticky-widget-arrow-icon" width="25" height="25" aria-hidden="true">
+                    <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+            </button>
+        </div>
 
         <!-- Hero section -->
         <section class="hero-section">
@@ -898,6 +910,7 @@
         </div>
     </div>
 
+    <script src="./js/sticky-widget.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/header.js"></script>
 </body>

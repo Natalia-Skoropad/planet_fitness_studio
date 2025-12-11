@@ -329,17 +329,27 @@ button:focus-visible {
    FLOATING MANAGER BUTTON
    =========================== */
 
-.manager-chat-btn {
+.manager-chat-btn-div {
   position: fixed;
-  bottom: 25px;
-  right: 16px;
+  right: 20px;
+  bottom: 30px;
   z-index: 50;
+}
 
-  padding-inline: 22px;
+.manager-chat-btn {
+  height: 55px;
+  border-radius: 50px;
+
+  display: grid;
+  place-items: center;
+
   background-color: #ff7a1f;
-  color: #111217;
-  box-shadow: 0 20px 55px rgba(17, 18, 23, 1);
+  box-shadow: 0 0 0 50px rgba(250, 204, 21, 0);
   animation: manager-pulse 2.6s infinite;
+}
+
+.manager-chat-btn svg {
+  fill: #111217;
 }
 
 @keyframes manager-pulse {
@@ -354,9 +364,47 @@ button:focus-visible {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .manager-chat-btn {
-    bottom: 32px;
-    right: 32px;
-  }
+/* ===========================
+   Sticky Widget BUTTON
+   =========================== */
+
+.sticky-widget-div {
+  position: fixed;
+  right: 20px;
+  bottom: 125px;
+  z-index: 50;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sticky-widget-div.sticky-widget-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sticky-widget-div-button {
+  height: 55px;
+  border-radius: 50px;
+  background: #111217;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.sticky-widget-div-button:hover,
+.sticky-widget-div-button:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0px 30px rgba(55, 65, 81, 0.3);
+}
+
+.sticky-widget-div-button svg {
+  fill: #fffaf5;
+  transform: rotate(-180deg);
 }
