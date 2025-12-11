@@ -107,7 +107,7 @@
 }
 
 .modal-form-input {
-  max-width: 540px;
+  display: block;
   padding: 10px 12px;
 
   border-radius: 10px;
@@ -119,10 +119,6 @@
 
   transition: border-color var(--transition-fast),
     box-shadow var(--transition-fast), background-color var(--transition-fast);
-}
-
-.modal-select {
-  width: 100%;
 }
 
 .modal-form-input::placeholder {
@@ -140,6 +136,7 @@
 /* select + arrow */
 .modal-wrapper {
   position: relative;
+  width: 100%;
 }
 
 .modal-select {
@@ -148,6 +145,7 @@
   -moz-appearance: none;
   padding-right: 40px;
   cursor: pointer;
+  min-width: 266px;
 }
 
 .modal-select-arrow {
@@ -226,11 +224,20 @@ textarea.modal-form-input {
    =========================== */
 
 .modal-form-button {
-  width: 100%;
+  display: block;
+  max-width: 320px;
 }
 
 @media screen and (min-width: 768px) {
   .modal {
     width: min(540px, 100% - 32px);
+  }
+
+  .modal-select {
+    min-width: 487px;
+  }
+
+  .modal-form-button {
+    max-width: 540px;
   }
 }

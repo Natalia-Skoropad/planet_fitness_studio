@@ -14,7 +14,8 @@
 }
 
 .contacts-section-button {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .contacts-section-container img {
@@ -43,9 +44,7 @@
   }
 
   .contacts-section-button {
-    align-self: flex-start;
-    width: auto;
-    padding-inline: 24px;
+    margin: 0;
   }
 }
 
